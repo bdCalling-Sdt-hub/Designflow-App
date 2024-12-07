@@ -4,11 +4,12 @@ import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { IoLocation } from "react-icons/io5";
 import { IoMdLock } from "react-icons/io";
+import Link from "next/link"; 
 
 export default function page() {
   return (
-    <div className="grid grid-cols-2 gap-10">
-      <div className="p-20 ">
+    <div className="grid lg:grid-cols-2 gap-10">
+      <div className="lg:p-20 sm:p-10 p-5 ">
         <form>
           <div>
             <img
@@ -100,7 +101,7 @@ export default function page() {
                   I accept the Terms of Service and Privacy Policy.
                 </label>
               </div>
-              <button> Forgot password?</button>
+              <Link href={'/forgot-password'}> Forgot password?</Link>
             </div>
           </div>
 
@@ -108,11 +109,11 @@ export default function page() {
             Sign Up
           </button>
 
-          <p className="py-10 text-center">
+          <p className="lg:py-10 py-5 text-center">
             Already have an account ?
-            <span className="underline font-semibold cursor-pointer ml-2">
+            <Link href={'/login'} className="underline font-semibold cursor-pointer ml-2">
                Login
-            </span>
+            </Link>
           </p>
 
           <div className="flex items-center justify-between">
@@ -129,8 +130,8 @@ export default function page() {
           </div>
         </form>
       </div>
-      <div>
-        <img src="/image/register-accout.png" alt="login Banner" />
+      <div className="lg:block hidden">
+        <img className="h-full" src="/image/register-accout.png" alt="login Banner" />
       </div>
     </div>
   );

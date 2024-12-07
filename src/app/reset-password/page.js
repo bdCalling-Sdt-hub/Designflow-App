@@ -4,8 +4,8 @@ import { IoMdLock } from "react-icons/io";
 export default function page() {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-10">
-        <div className="p-20 ">
+      <div className="grid lg:grid-cols-2 gap-10">
+        <div className="lg:p-20 sm:p-10 p-5 ">
           <form>
             <div>
               <img
@@ -55,8 +55,8 @@ export default function page() {
              
           </form>
         </div>
-        <div>
-          <img src="/image/Verify-otp.png" alt="login Banner" />
+        <div className="lg:block hidden">
+          <img className="h-full" src="/image/Verify-otp.png" alt="login Banner" />
         </div>
       </div>
     </div>

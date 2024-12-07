@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 
 export default function page() {
   return (
-    <div className="grid grid-cols-2 gap-10">
-      <div className="p-20 ">
+    <div className="grid lg:grid-cols-2 gap-10">
+      <div className="lg:p-20 sm:p-10 p-5">
         <form>
           <div>
             <img
@@ -67,11 +68,11 @@ export default function page() {
             Login
           </button>
 
-          <p className="py-10 text-center">
+          <p className="lg:py-10 py-5 text-center">
             Don’t have an account?{" "}
-            <span className="underline font-semibold cursor-pointer">
+            <Link href={'/register'} className="underline font-semibold cursor-pointer">
               Sign up
-            </span>
+            </Link>
           </p>
 
           <div className="flex items-center justify-between">
@@ -88,8 +89,8 @@ export default function page() {
           </div>
         </form>
       </div>
-      <div>
-        <img src="/image/Login-pageBanner-image.png" alt="login Banner" />
+      <div className="lg:block hidden">
+        <img className="h-full" src="/image/Login-pageBanner-image.png" alt="login Banner" />
       </div>
     </div>
   );
