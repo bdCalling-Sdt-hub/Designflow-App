@@ -1,5 +1,9 @@
 import React from "react";
-import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
+import { IoLocation } from "react-icons/io5";
+import { IoMdLock } from "react-icons/io";
 
 export default function page() {
   return (
@@ -15,19 +19,56 @@ export default function page() {
               height={192}
             />
 
-            <h2 className="text-4xl font-bold">Hello, Welcome!</h2>
+            <h2 className="text-4xl font-bold">Create an Account</h2>
             <p className="my-5 font-semibold">
-              Please Enter Your Details Below to Continue
+              Hello there, Let’s start Your Design Journey—Let’s Bring Your
+              Vision to Life.
             </p>
 
             <label>
-              <span className="mb-2 block">Your email</span>
+              <span className="mb-2 block">Name</span>
               <div className="flex items-center border-b-2 rounded-md bg-secondaryBg border-gray-300">
                 <FaUser className="text-gray-600 mr-2 mx-3" /> {/* User Icon */}
                 <input
                   className="p-2 w-full bg-transparent focus:border-primaryBg focus:border-0 active:border-0"
-                  placeholder="Your email"
+                  placeholder="Your Name"
+                  type="text"
+                />
+              </div>
+            </label>
+
+            <label className="block mt-5">
+              <span className="mb-2 block">Email</span>
+              <div className="flex items-center border-b-2 rounded-md bg-secondaryBg border-gray-300">
+                <MdEmail className="text-gray-600 mx-3 " /> {/* Lock Icon */}
+                <input
+                  className="p-2 w-full bg-transparent focus:border-primaryBg focus:border-0 active:border-0"
+                  placeholder="Your Email"
                   type="email"
+                />
+              </div>
+            </label>
+
+            <label className="block mt-5">
+              <span className="mb-2 block">Phone Number</span>
+              <div className="flex items-center border-b-2 rounded-md bg-secondaryBg border-gray-300">
+                <IoCall className="text-gray-600 mx-3 " /> {/* Lock Icon */}
+                <input
+                  className="p-2 w-full bg-transparent focus:border-primaryBg focus:border-0 active:border-0"
+                  placeholder="Enter Phone name"
+                  type="number"
+                />
+              </div>
+            </label>
+
+            <label className="block mt-5">
+              <span className="mb-2 block">Address</span>
+              <div className="flex items-center border-b-2 rounded-md bg-secondaryBg border-gray-300">
+                <IoLocation className="text-gray-600 mx-3 " /> {/* Lock Icon */}
+                <input
+                  className="p-2 w-full bg-transparent focus:border-primaryBg focus:border-0 active:border-0"
+                  placeholder="Type Location"
+                  type="text"
                 />
               </div>
             </label>
@@ -35,7 +76,7 @@ export default function page() {
             <label className="block mt-5">
               <span className="mb-2 block">Password</span>
               <div className="flex items-center border-b-2 rounded-md bg-secondaryBg border-gray-300">
-                <FaLock className="text-gray-600 mx-3 " /> {/* Lock Icon */}
+                <IoMdLock className="text-gray-600 mx-3 " /> {/* Lock Icon */}
                 <input
                   className="p-2 w-full bg-transparent focus:border-primaryBg focus:border-0 active:border-0"
                   placeholder="Your Password"
@@ -56,7 +97,7 @@ export default function page() {
                   htmlFor="default-checkbox"
                   className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Default checkbox
+                  I accept the Terms of Service and Privacy Policy.
                 </label>
               </div>
               <button> Forgot password?</button>
@@ -64,13 +105,13 @@ export default function page() {
           </div>
 
           <button className="bg-primaryBg text-white w-full p-2 my-3 rounded-md">
-            Login
+            Sign Up
           </button>
 
           <p className="py-10 text-center">
-            Don’t have an account?{" "}
-            <span className="underline font-semibold cursor-pointer">
-              Sign up
+            Already have an account ?
+            <span className="underline font-semibold cursor-pointer ml-2">
+               Login
             </span>
           </p>
 
@@ -89,7 +130,7 @@ export default function page() {
         </form>
       </div>
       <div>
-        <img src="/image/Login-pageBanner-image.png" alt="login Banner" />
+        <img src="/image/register-accout.png" alt="login Banner" />
       </div>
     </div>
   );
