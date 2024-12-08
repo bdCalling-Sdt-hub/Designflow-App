@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { MdEmail } from "react-icons/md";
 
@@ -8,7 +9,7 @@ export default function page() {
         <div className="lg:p-20 sm:p-10 p-5">
           <form>
             <div>
-              <img
+              <Image
                 className="w-24 h-24 mb-20"
                 src="/image/Login_logo.png"
                 alt="logo_image"
