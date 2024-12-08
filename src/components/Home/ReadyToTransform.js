@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ReadyToTransform() {
   return (
-    <div className='md:h-screen h-[80vh] relative'>
+    <div className='md:h-screen h-[80vh] relative my-10 md:my-20'>
        <div className="bg-[url('/image/hero/ReadyToTarnsform.png')] md:min-h-[90vh] h-[60vh] w-[90%] bg-no-repeat rounded-tr-2xl rounded-br-2xl">
        </div>
 

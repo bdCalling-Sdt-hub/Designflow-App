@@ -17,7 +17,7 @@ export default function Header() {
         <img className="w-14 h-14" src="/image/Login_logo.png" alt="Logo" />
       </Link>
       <ul
-        className={`md:relative top-20 md:top-0 bg-white w-full md:w-auto left-0 absolute items-center justify-center gap-14 ${
+        className={`md:relative top-20 px-3 md:px-0 md:top-0 bg-white w-full md:w-auto left-0 absolute items-center justify-center gap-14 ${
           isMenuOpen ? "block" : "hidden"
         } md:flex`}
       >
@@ -38,7 +38,7 @@ export default function Header() {
         </li>
       </ul>
       <div className="flex justify-between">
-        <ul
+        {/* <ul
           className={`md:relative md:hidden  top-20 md:top-0 bg-white w-full md:w-auto left-0 absolute items-center justify-center gap-14 ${
             isMenuOpen ? "hidden" : "hidden"
           } md:flex`}
@@ -58,7 +58,7 @@ export default function Header() {
           <li className="my-5">
             <Link href={"/"}>Contact</Link>
           </li>
-        </ul>
+        </ul> */}
         <div className="flex items-center gap-2">
           <button className="py-3 px-10 font-semibold rounded-md text-white bg-[#ea733c]">
             Login

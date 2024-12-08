@@ -1,9 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Footer() {
+export default function DashboardFooter() {
+
+
+  
   return (
-    <div className="bg-[#232a20] py-10 md:py-20">
+    <div className="bg-[#6e655c] py-10 md:py-20">
       <div className="md:w-[80%] w-[90%] mx-auto lg:grid grid-cols-4 gap-10">
         <div className="col-span-1">
           <img className="w-20 h-20" src="./image/Login_logo.png" alt="Logo" />
