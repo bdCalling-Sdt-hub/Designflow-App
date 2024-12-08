@@ -7,7 +7,7 @@ export default function DashboardFooter() {
   
   return (
     <div className="bg-[#6e655c] py-10 md:py-20">
-      <div className="md:w-[80%] w-[90%] mx-auto lg:grid grid-cols-4 gap-10">
+      <div className="md:w-[78%] w-[90%] mx-auto lg:grid grid-cols-4 gap-10">
         <div className="col-span-1">
           <img className="w-20 h-20" src="./image/Login_logo.png" alt="Logo" />
           <h2 className="text-2xl font-semibold text-white my-5">Designflow</h2>
@@ -35,7 +35,7 @@ export default function DashboardFooter() {
           </ul>
         </div>
       </div>
-      <div className="md:w-[80%] w-[90%] mx-auto">
+      <div className="md:w-[78%] w-[90%] mx-auto">
         <hr className=" my-10" />
         <p className="text-lime-50">Copyright @2024. All Rights Reserved</p>
       </div>
