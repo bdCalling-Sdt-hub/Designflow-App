@@ -2,8 +2,8 @@ import React from "react";
 
 export default function DashboardHero() {
   return (
-    <div className="relative min-h-screen">
-      <div className="bg-[url('/image/Dashboard/DashboardHeroColorBg.png')] md:min-h-screen h-[60vh]  md:h-[70vh] md:w-[60%] w-[90%] bg-no-repeat absolute right-0 z-10 rounded-bl-3xl">
+    <div className="relative min-h-screen w-full">
+      <div className="bg-[url('/image/Dashboard/DashboardHeroColorBg.png')] bg-cover  md:min-h-screen h-[60vh]  md:h-[70vh] md:w-[60%] w-[90%] bg-no-repeat absolute right-0 top-0 z-0 rounded-bl-3xl">
         <img
           className="absolute right-0 md:bottom-20 bottom-10 z-10 md:rounded-none rounded-xl w-[60%] md:w-auto"
           src="/image/hero/HeroDown.png"

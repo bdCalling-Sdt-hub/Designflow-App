@@ -18,13 +18,13 @@ export default function DashboardAddProject() {
           </h2>
           <div className="flex my-2 items-center gap-5">
             <div
-              className="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700"
+              className="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700"
               role="progressbar"
               aria-valuenow="25"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              <div className="flex w-[90%] flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500">
+              <div className="flex w-[90%] flex-col justify-center rounded-full overflow-hidden bg-[#74956c] text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500">
                 {" "}
               </div>
             </div>
