@@ -23,7 +23,7 @@ export default function DashboardSidebar() {
   }
 
   return (
-    <div className="bg-[#232a20] w-[12.3vw] min-h-screen top-0 md:block hidden">
+    <div className="bg-[#232a20] w-[12.3vw] min-h-screen md:block hidden">
       <div className="p-3 bg-[#a5a8a6]">
         <Link href="/dashboard">
         <img className="w-14 mx-auto" src="/image/Login_logo.png" alt="Logo" />

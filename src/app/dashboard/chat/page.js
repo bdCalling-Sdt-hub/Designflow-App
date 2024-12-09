@@ -3,9 +3,9 @@ import DashboardHomeHeader from '@/components/dashboard/dashboardHome/DashboardH
 
 export default function page() {
   return (
-    <div className="ml-5">
+    <div className="">
         <DashboardHomeHeader></DashboardHomeHeader>
-      chat
+        chat
     </div>
   )
 }

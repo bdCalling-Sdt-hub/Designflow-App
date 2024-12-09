@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className="ml-5">
+    <div className="md:ml-5 mx-5 md:mx-0">
         <DashboardHomeHeader></DashboardHomeHeader>
         <DashboardHome></DashboardHome>
     </div>

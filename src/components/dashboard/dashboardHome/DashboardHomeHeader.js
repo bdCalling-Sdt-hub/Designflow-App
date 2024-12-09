@@ -1,8 +1,7 @@
 "use client"
 import {React , useState} from "react";
 import { IoNotifications } from "react-icons/io5";
-
-
+import Link from "next/link";
 
 
 export default function DashboardHomeHeader() {
@@ -21,11 +20,13 @@ export default function DashboardHomeHeader() {
         <h2 className="text-3xl font-semibold mb-2">Welcome, Anika </h2>
         <p>Have a nice day</p>
       </div>
-      <div onClick={handleShowDropdown} className="flex items-center cursor-pointer gap-2">
-        <div>
-          <IoNotifications className="text-3xl " />
-        </div>
-        <div>
+      <div  className="flex items-center cursor-pointer gap-2">
+        <Link href="/dashboard/notification">
+      
+           <IoNotifications className="text-3xl" />
+    
+        </Link>
+        <div onClick={handleShowDropdown}>
             <img src="/image/Dashboard/user_Dropdown.png" alt="user Image"/>
         </div>
       </div>

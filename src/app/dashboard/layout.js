@@ -6,14 +6,10 @@ import DashboardSidebar from "@/components/common/DashboardSidebar";
 export default function layout({ children }) {
   return (
     <div>
-      
       <div className="flex ">
         <DashboardSidebar></DashboardSidebar>
-        <div className="w-full">
-        {children}
-        </div>
+        <div className="w-full">{children}</div>
       </div>
-      
     </div>
   );
 }
