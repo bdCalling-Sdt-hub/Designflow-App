@@ -62,7 +62,7 @@ export default function DashboardSidebar() {
 
 
 
-          <Link
+          {/* <Link
             className={`mb-5 flex items-center gap-2 px-6 py-2 ${
               pathname === "/dashboard/chat" ? "bg-[#1f2521] text-white" : "text-white"
             }`} // Conditional class for active route
@@ -85,7 +85,10 @@ export default function DashboardSidebar() {
             href="/settings"
           >
             <CiSettings className="text-xl" /> Settings
-          </Link>
+          </Link> */}
+
+
+
         </ul>
         <div className="text-red-600 px-6 flex items-center gap-2 font-semibold cursor-pointer">
           Logout <IoMdReturnRight />

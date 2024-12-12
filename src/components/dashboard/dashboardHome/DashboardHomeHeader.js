@@ -1,17 +1,18 @@
 "use client"
-import {React , useState} from "react";
+import { React, useState } from "react";
 import { IoNotifications } from "react-icons/io5";
 import Link from "next/link";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 
 export default function DashboardHomeHeader() {
 
 
-    const [toggleDrop , setToggleDrop] = useState(false)
+  const [toggleDrop, setToggleDrop] = useState(false)
 
-    const  handleShowDropdown = ()=>{
-        setToggleDrop(!toggleDrop)
-    }
+  const handleShowDropdown = () => {
+    setToggleDrop(!toggleDrop)
+  }
 
 
   return (
@@ -20,19 +21,22 @@ export default function DashboardHomeHeader() {
         <h2 className="text-3xl font-semibold mb-2">Welcome, Anika </h2>
         <p>Have a nice day</p>
       </div>
-      <div  className="flex items-center cursor-pointer gap-2">
+      <div className="flex items-center cursor-pointer gap-2">
         <Link href="/dashboard/notification">
-      
-           <IoNotifications className="text-3xl" />
-    
+
+          <IoNotifications className="text-3xl" />
+
         </Link>
-        <div onClick={handleShowDropdown}>
-            <img src="/image/Dashboard/user_Dropdown.png" alt="user Image"/>
+        <div onClick={handleShowDropdown} className="flex items-center gap-2">
+          <img className="w-10 rounded-full" src="/image/Dashboard/userImage.png" alt="user Image" />
+          {
+            !toggleDrop ? <FaChevronDown /> : <FaChevronUp />
+          }
         </div>
       </div>
       {
-        toggleDrop && 
-        <div className=" absolute top-24 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
+        toggleDrop &&
+        <div className="z-[9999999] absolute top-24 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
           <p>Profile</p>
         </div>
       }

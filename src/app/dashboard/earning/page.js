@@ -1,6 +1,6 @@
 'use client'
 import DashboardHomeHeader from '@/components/dashboard/dashboardHome/DashboardHomeHeader';
-import { DatePicker, Modal } from 'antd';
+import { DatePicker, Modal, Pagination } from 'antd';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaArrowLeft, FaExchangeAlt, FaSearch } from 'react-icons/fa';
@@ -97,8 +97,8 @@ const page = () => {
                 </div>
             </div>
             <div>
-                <div className="overflow-x-auto mr-10 ">
-                    <table className="min-w-full table-auto border-collapse bg-[#dee6dc] border-2 border-[#dee6dc]">
+                <div className="overflow-x-auto mr-10 mt-10 bg-[#dee6dc]">
+                    <table className="min-w-full table-auto border-collapse  border-2 border-[#dee6dc]">
                         <thead className="bg-[#344331]">
                             <tr>
                                 <th className="px-4 text-left font-semibold text-white py-4">#ID</th>
@@ -134,11 +134,19 @@ const page = () => {
                             ))}
                         </tbody>
                     </table>
+                    <div>
+                        <div className='flex items-center justify-between p-5'>
+                            <h2 className='font-semibold'>SHOWING 1-12 OF 250</h2>
+                            <div className='flex items-center justify-end'>
+                                <Pagination defaultCurrent={1} total={50} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <Modal open={isModalOpen} footer={false} onCancel={handleCancel}>
-                    <div className="flex justify-between items-center pb-4 border-b">
-                        <h2 className="font-semibold text-2xl">Project Offer</h2>
+                    <div className="flex justify-between items-center pb-4 ">
+                        <h2 className="font-semibold text-2xl text-center ">Transaction Details</h2>
                         <button
                             onClick={handleCancel}
                             className="text-white bg-red-500 hover:bg-red-600 p-2 rounded-full focus:outline-none focus:ring focus:ring-red-300"
@@ -155,55 +163,13 @@ const page = () => {
                             </svg>
                         </button>
                     </div>
-
-                    <form
-                        className="p-6 w-full max-w-lg mx-auto"
-                        onSubmit={(e) => {
-                            e.preventDefault(); // Prevent default form submission
-                            handleFormSubmit(); // Custom function to handle form submission
-                        }}
-                    >
-                        {/* Project Name */}
-                        <label className="block mb-4">
-                            <span className="block mb-2 text-gray-700 font-medium">Project Name</span>
-                            <input
-                                type="text"
-                                placeholder="Enter project name"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
-                            />
-                        </label>
-
-                        {/* Timeline */}
-                        <label className="block mb-4">
-                            <span className="block mb-2 text-gray-700 font-medium">Timeline</span>
-                            <input
-                                type="text"
-                                placeholder="e.g., 3 weeks"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
-                            />
-                        </label>
-
-                        {/* Budget */}
-                        <label className="block mb-6">
-                            <span className="block mb-2 text-gray-700 font-medium">Budget</span>
-                            <input
-                                type="number"
-                                placeholder="Enter budget amount"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
-                            />
-                        </label>
-
-                        {/* Submit Button */}
-                        <div>
-                            <button
-                                type="submit"
-                                onClick={handleOk}
-                                className="w-48 mx-auto flex justify-center font-semibold text-xl items-center bg-primaryBg text-white py-3 px-4 rounded-md focus:ring focus:ring-blue-300 focus:outline-none"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </form>
+                    <div>
+                        <h2 className='flex justify-between py-4 border-b-2'><span>Transaction ID : </span> <span className='font-semibold'>#12345678</span></h2>
+                        <h2 className='flex justify-between py-4 border-b-2'><span>Transaction ID : </span> <span className='font-semibold'>#12345678</span></h2>
+                        <h2 className='flex justify-between py-4 border-b-2'><span>Transaction ID : </span> <span className='font-semibold'>#12345678</span></h2>
+                        <h2 className='flex justify-between py-4 border-b-2'><span>Transaction ID : </span> <span className='font-semibold'>#12345678</span></h2>
+                        <h2 className='flex justify-between py-4 border-b-2'><span>Transaction ID : </span> <span className='font-semibold'>#12345678</span></h2>
+                    </div>
                 </Modal>
 
 
