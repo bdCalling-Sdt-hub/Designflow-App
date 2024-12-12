@@ -8,6 +8,7 @@ export default function DashboardAddProject() {
       <div className="text-center mb-10">
         <h2 className="mb-3 text-5xl uppercase">My Projects</h2>
         <p>Track, manage, and collaborate on your interior design projects.</p>
+        
       </div>
       <div className="grid md:grid-cols-2 md:gap-16 gap-8">
         <div className="bg-[#f1f4f0] p-5 rounded-xl">

@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { CiSettings } from "react-icons/ci";
+import { CiDollar, CiSettings } from "react-icons/ci";
 import { HiOutlineViewGrid, HiViewGrid } from "react-icons/hi";
 import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 import { IoMdReturnRight } from "react-icons/io";
 import { usePathname } from "next/navigation"; // Correct hook for path
+import { RiMenuUnfoldFill } from "react-icons/ri";
+
 
 export default function DashboardSidebar() {
   const [isClient, setIsClient] = useState(false); // Track if we're on the client side
@@ -39,6 +41,27 @@ export default function DashboardSidebar() {
           >
             <HiViewGrid className="text-xl" /> Dashboard
           </Link>
+
+          <Link
+            className={`mb-5 flex items-center gap-2 px-6 py-2 ${
+              pathname === "/dashboard/servicerequests" ? "bg-[#1f2521] text-white" : "text-white"
+            }`} // Conditional class for active route
+            href="/dashboard/servicerequests"
+          >
+            <RiMenuUnfoldFill className="text-xl" /> Service Requests
+          </Link>
+
+          <Link
+            className={`mb-5 flex items-center gap-2 px-6 py-2 ${
+              pathname === "/dashboard/earning" ? "bg-[#1f2521] text-white" : "text-white"
+            }`} // Conditional class for active route
+            href="/dashboard/earning"
+          >
+            <CiDollar className="text-xl" /> Earning
+          </Link>
+
+
+
           <Link
             className={`mb-5 flex items-center gap-2 px-6 py-2 ${
               pathname === "/dashboard/chat" ? "bg-[#1f2521] text-white" : "text-white"
