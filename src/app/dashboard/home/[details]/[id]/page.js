@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,7 +29,7 @@ const page = () => {
                 <Link href={'/dashboard/home/id/id/sdf'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>
                 <Link href={'/dashboard/home/id/id/sdf'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>
                 <Link href={'/dashboard/home/id/id/sdf'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>
-                
+
             </div>
             <div>
                 <h2 className='my-10 font-semibold text-2xl'>Provided Description</h2>
@@ -109,9 +109,8 @@ const page = () => {
                 </form>
             </Modal>
 
-
         </div >
     );
 }
 
-export default page;
+export default Page;

@@ -60,6 +60,15 @@ export default function DashboardSidebar() {
             <CiDollar className="text-xl" /> Earning
           </Link>
 
+          <Link
+            className={`mb-5 flex items-center gap-2 px-6 py-2 ${
+              pathname === "/dashboard/projects" ? "bg-[#1f2521] text-white" : "text-white"
+            }`} // Conditional class for active route
+            href="/dashboard/projects"
+          >
+            <HiOutlineViewGrid className="text-xl" /> Projects
+          </Link>
+
 
 
           {/* <Link

@@ -1,4 +1,5 @@
 'use client'
+
 import DashboardHomeHeader from "@/components/dashboard/dashboardHome/DashboardHomeHeader";
 import React from "react";
 import { FaRegUser } from "react-icons/fa";
@@ -9,6 +10,8 @@ import { IoEye } from "react-icons/io5";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import Link from "next/link";
 import Swal from "sweetalert2";
+import { Column } from '@ant-design/plots';
+import { Area } from '@ant-design/plots';
 
 const tableData = [
   { id: 1, name: "John Doe", email: "john@example.com", phone: "123-456-7890", requestDate: "2024-12-10" },
@@ -17,11 +20,9 @@ const tableData = [
   { id: 4, name: "Emily White", email: "emily@example.com", phone: "321-654-9870", requestDate: "2024-12-07" },
 ];
 
+export default function Page() {
 
-export default function page() {
-
-
-  const handleRemove = ()=>{
+  const handleRemove = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -41,10 +42,52 @@ export default function page() {
     });
   }
 
+  const config = {
+    data: {
+      type: 'fetch',
+      value: 'https://assets.antv.antgroup.com/g2/stocks.json',
+      transform: [{ type: 'filter', callback: (d) => d.symbol === 'GOOG' }],
+    },
+    xField: (d) => new Date(d.date),
+    yField: 'price',
+    style: {
+      fill: 'linear-gradient(90deg, white 0%, #f4b598 100%)',
+    },
+    axis: {
+      y: { labelFormatter: '~s' },
+    },
+    line: {
+      style: {
+        stroke: '#f4b598',
+        strokeWidth: 2,
+      },
+    },
+  };
+
+  const config2 = {
+    data: {
+      type: 'fetch',
+      value: 'https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json',
+    },
+    style: {
+      fill: '#f4b598',
+    },
+    xField: '城市',
+    yField: '销售额',
+    scrollbar: {
+      x: { ratio: 0.05 },
+    },
+    columnStyle: (datum) => {
+      return {
+        fill: datum.sales > 2000 ? '#FF6347' : '#f4b598', // Example condition
+      };
+    },
+  };
+  
 
   return (
-    <div clssName="md:px-10">
-      <div className="my-10">
+    <div className="md:px-10">
+      <div className="mt-10">
         <h2 className="text-3xl font-semibold mb-10">Overview</h2>
         <div className="pr-10 grid grid-cols-4 gap-10">
           <div className="flex items-center justify-between bg-[#171c17] p-8 rounded-lg">
@@ -52,7 +95,7 @@ export default function page() {
               <FaRegUser className="text-3xl" />
             </div>
             <div className="text-white flex justify-end flex-col items-end">
-              <h2 className="text-4xl mb-2 font-semibold ">52</h2>
+              <h2 className="text-4xl mb-2 font-semibold">52</h2>
               <p>Total Clients</p>
             </div>
           </div>
@@ -61,7 +104,7 @@ export default function page() {
               <CiDollar className="text-4xl" />
             </div>
             <div className="text-white flex justify-end flex-col items-end">
-              <h2 className="text-4xl mb-2 font-semibold ">$20.5K</h2>
+              <h2 className="text-4xl mb-2 font-semibold">$20.5K</h2>
               <p>Total Earnings</p>
             </div>
           </div>
@@ -71,18 +114,38 @@ export default function page() {
               <TiDocumentText className="text-4xl" />
             </div>
             <div className="text-white flex justify-end flex-col items-end">
-              <h2 className="text-4xl mb-2 font-semibold ">800</h2>
+              <h2 className="text-4xl mb-2 font-semibold">800</h2>
               <p>Recent Appointment</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="">
+      <div className="grid lg:grid-cols-2 items-center gap-10">
+        {/* Client Overview 1 */}
+        <div className="w-full bg-gray-100 p-10 pb-20 rounded-xl my-10 h-[50vh]">
+          <h2 className="mb-10 font-semibold text-xl">Client Overview</h2>
+          <div className="h-full w-full">
+            {/* Ensure the Area chart takes up the full height available */}
+            <Area className="w-full h-full" {...config} />
+          </div>
+        </div>
+
+        {/* Client Overview 2 */}
+        <div className="w-full bg-gray-100 p-10 pb-20 rounded-xl my-10 h-[50vh]">
+          <h2 className="mb-10 font-semibold text-xl">Client Overview</h2>
+          <div className="h-full w-full">
+            {/* Ensure the Area chart takes up the full height available */}
+            <Column className="w-full h-full" {...config2} />
+          </div>
+        </div>
+      </div>
+
+      <div>
         <h2 className="text-3xl font-semibold mb-10">Recent Requests</h2>
 
-        <div className="overflow-x-auto pr-10 ">
-          <table className="min-w-full table-auto border-collapse bg-white  border-2">
+        <div className="overflow-x-auto pr-10">
+          <table className="min-w-full table-auto border-collapse bg-white border-2">
             <thead className="bg-black">
               <tr>
                 <th className="px-4 text-left font-semibold text-white py-4">#ID</th>
@@ -95,30 +158,32 @@ export default function page() {
             </thead>
             <tbody>
               {tableData.map((client) => (
-                <tr key={client.id} className="">
+                <tr key={client.id}>
                   <td className="px-4 py-4">{client.id}</td>
                   <td className="px-4 py-4 flex items-center gap-2">
-                      <img className="w-10" src="/image/Dashboard/userImage.png" alt="image" />
-                     {client.name}</td>
+                    <img className="w-10" src="/image/Dashboard/userImage.png" alt="client" />
+                    {client.name}
+                  </td>
                   <td className="px-4 py-4">{client.email}</td>
                   <td className="px-4 py-4">{client.phone}</td>
                   <td className="px-4 py-4">{client.requestDate}</td>
                   <td className="px-4 py-4 flex flex-wrap gap-5 justify-end">
-                    <button className="bg-blue-800 text-white flex items-center py-2 px-8 rounded gap-2"><FiCornerUpLeft />Send Offer</button>
-                    <Link href={'/dashboard/home/sdf'} className="bg-orange-600 text-white flex items-center py-2 px-8 rounded gap-2"><IoEye />View</Link>
-                    <button onClick={handleRemove} className="bg-red-600 text-white flex items-center py-2 px-8 rounded gap-2"><IoIosRemoveCircleOutline />Remove</button>
-                     
+                    <button className="bg-blue-800 text-white flex items-center py-2 px-8 rounded gap-2">
+                      <FiCornerUpLeft /> Send Offer
+                    </button>
+                    <Link href={'/dashboard/home/sdf'} className="bg-orange-600 text-white flex items-center py-2 px-8 rounded gap-2">
+                      <IoEye /> View
+                    </Link>
+                    <button onClick={handleRemove} className="bg-red-600 text-white flex items-center py-2 px-8 rounded gap-2">
+                      <IoIosRemoveCircleOutline /> Remove
+                    </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-
-
-        
       </div>
-
-    </div >
+    </div>
   );
 }

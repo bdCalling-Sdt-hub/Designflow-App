@@ -121,6 +121,11 @@ const page = () => {
                         </select>
                     </div>
 
+                    <div className='my-5 block'>
+                        <h2 className='py-2 border-b-[1px] border-primaryBg mb-2 text-xl font-semibold'>Timeline</h2>
+                        <p className='flex items-center gap-2 border p-2 mt-5 border-black justify-center'><CiCalendarDate className='font-semibold text-2xl' />12 December 2025 - 20 December 2025</p>
+                    </div>
+
                     <div className='flex items-center justify-end'>
                         <Link className='mt-20  px-20 rounded-md py-3 bg-[#637f5c] text-white ' href={'/dashboard/home/id/id'}>Next</Link>
                     </div>

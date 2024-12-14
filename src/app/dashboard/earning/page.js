@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import DashboardHomeHeader from '@/components/dashboard/dashboardHome/DashboardHomeHeader';
 import { DatePicker, Modal, Pagination } from 'antd';
 import Link from 'next/link';
@@ -34,7 +34,7 @@ const tableData = [
     // Add more rows as needed
 ];
 
-const page = () => {
+const Page = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -179,4 +179,4 @@ const page = () => {
     );
 }
 
-export default page;
+export default Page;

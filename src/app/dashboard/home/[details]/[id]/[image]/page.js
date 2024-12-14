@@ -4,7 +4,7 @@ import { Button, Modal } from 'antd';
 
 
 
-const page = () => {
+const Page = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -19,7 +19,7 @@ const page = () => {
     const handleCancel = () => {
         setIsModalOpen(false);
     };
-    
+
     return (
         <div className='mr-10 py-10'>
             <div>
@@ -107,4 +107,4 @@ const page = () => {
     );
 }
 
-export default page;
+export default Page;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { CiFilter } from 'react-icons/ci';
 import { FaRegLightbulb, FaRegStar, FaSearch, FaStar } from 'react-icons/fa';
 
-const page = () => {
+const Page = () => {
 
     const [showFilter, setShowFilter] = useState(false)
 
@@ -244,4 +244,4 @@ const page = () => {
     );
 }
 
-export default page;
+export default Page;
