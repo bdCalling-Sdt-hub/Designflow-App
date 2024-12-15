@@ -23,9 +23,9 @@ const Page = () => {
 
     return (
         <div>
-            <div className='pr-10 mb-10'>
+            <div className='md:pr-10 md:px-0 px-5 mb-10'>
                 <h2 className='my-10 font-semibold text-2xl'>Uploaded Files</h2>
-                <div className='grid grid-cols-4 gap-10'>
+                <div className='grid xl:grid-cols-4 sm:grid-cols-2 gap-10'>
                     <Link href={'/dashboard/projects/details/upload/uploadDetails'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>
                     <Link href={'/dashboard/projects/details/upload/uploadDetails'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>
                     <Link href={'/dashboard/projects/details/upload/uploadDetails'}><img className='rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" /></Link>

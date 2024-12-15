@@ -17,8 +17,8 @@ export default function DashboardHomeHeader() {
 
   return (
     <div className="bg-[#1f2521] p-5 rounded-md flex items-center justify-between text-white">
-      <div>
-        <h2 className="text-3xl font-semibold mb-2">Welcome, Anika </h2>
+      <div className="md:ml-0 ml-10">
+        <h2 className="md:text-3xl text-xl font-semibold mb-2">Welcome, Anika </h2>
         <p>Have a nice day</p>
       </div>
       <div className="flex items-center cursor-pointer gap-2">
@@ -36,7 +36,7 @@ export default function DashboardHomeHeader() {
       </div>
       {
         toggleDrop &&
-        <div className="z-[9999999] hover:bg-[#637f5c] hover:text-white hover:cursor-pointer absolute top-28 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
+        <div onClick={handleShowDropdown} className="z-[9999999] hover:bg-[#637f5c] hover:text-white hover:cursor-pointer absolute top-28 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
           <Link href={'/dashboard/setting/personalinformation'} >Profile</Link>
         </div>
       }

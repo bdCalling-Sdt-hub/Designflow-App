@@ -13,7 +13,7 @@ const Page = () => {
     ];
 
     return (
-        <div className='my-10 mr-10'>
+        <div className='my-10 md:mr-10 md:px-0 px-5'>
             <div className="overflow-x-auto">
                 <table className="min-w-full table-auto bg-white border border-gray-200 rounded-lg shadow-md">
                     <thead>

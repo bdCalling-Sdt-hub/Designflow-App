@@ -4,7 +4,7 @@ import { FaChevronLeft } from 'react-icons/fa';
 
 const Page = () => {
     return (
-        <div className='mr-10'>
+        <div className='md:mr-10 md:px-0 px-5'>
             <Link className='text-2xl font-semibold my-10 flex items-center gap-2' href={'/dashboard/setting'}>
                 <FaChevronLeft className="text-xl font-semibold" />
                 Trams & Condition

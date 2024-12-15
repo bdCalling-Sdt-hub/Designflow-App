@@ -5,7 +5,7 @@ import { IoMdEye } from 'react-icons/io';
 
 const Page = () => {
     return (
-        <div className='mr-10'>
+        <div className='md:mr-10 md:px-0 px-5'>
             <div className='flex justify-between items-center flex-wrap my-10'>
                 <Link href={'/'} className='flex items-center gap-5 text-2xl font-semibold'><FaArrowLeft />Client List</Link>
                 <div className='flex items-center gap-5'>

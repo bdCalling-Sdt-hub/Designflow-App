@@ -42,8 +42,8 @@ const Page = () => {
     };
 
     return (
-        <div className='my-10 mr-10 grid grid-cols-4 gap-10 items-center'>
-            <div className='col-span-3 relative overflow-hidden'>
+        <div className='my-10 md:mr-10 md:px-0 px-5 grid md:grid-cols-4 gap-10 items-center'>
+            <div className='md:col-span-3 relative overflow-hidden'>
                 <div className='w-full h-full'>
                     {/* Image with scaling */}
                     <img
@@ -71,7 +71,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-span-1'>
+            <div className='md:col-span-1'>
 
                 <div className=' my-5 '>
 

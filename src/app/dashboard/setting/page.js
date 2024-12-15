@@ -10,7 +10,7 @@ const Page = () => {
     return (
         <div>
 
-            <div className='mr-10 my-10'>
+            <div className='md:mr-10 md:px-0 px-5 my-10'>
 
                 <Link className='flex items-center font-semibold text-2xl gap-2 ' href={'/dashboard/home/'}>
                     <FaChevronLeft className='text-xl' /> Settings

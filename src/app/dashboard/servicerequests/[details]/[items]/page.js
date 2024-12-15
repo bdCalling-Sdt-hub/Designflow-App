@@ -12,7 +12,7 @@ const Page = () => {
     }
 
     return (
-        <div className='my-10 mr-10'>
+        <div className='my-10 md:mr-10 md:px-0 px-5'>
             <div className=' flex items-center gap-3 justify-end'>
                 <div className='relative'>
                     <CiFilter onClick={handleFilterShow} className='text-4xl cursor-pointer' />
@@ -41,7 +41,7 @@ const Page = () => {
             </div>
 
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-10'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-10'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>
@@ -74,7 +74,7 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-5'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-5'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>
@@ -107,7 +107,7 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-5'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-5'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>
@@ -140,7 +140,7 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-5'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-5'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>
@@ -173,7 +173,7 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-5'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-5'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>
@@ -206,7 +206,7 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between p-5 border-2 border-black rounded-md mt-5'>
+            <div className='flex justify-between flex-wrap gap-10 md:gap-5 p-5 border-2 border-black rounded-md mt-5'>
                 <div className=' flex items-center gap-5'>
                     <img className='w-16 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                     <div>

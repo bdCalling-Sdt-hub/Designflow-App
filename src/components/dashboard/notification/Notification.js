@@ -5,8 +5,8 @@ import { CiCalendar } from "react-icons/ci";
 
 export default function Notification() {
   return (
-    <div className="mx-10 py-10">
-      <div className="flex items-center justify-between">
+    <div className="md:mx-10  py-10">
+      <div className="flex items-center justify-between flex-wrap gap-5">
         <div className="flex items-center gap-5">
           <img
             className="w-20"
@@ -27,7 +27,7 @@ export default function Notification() {
       </div>
       <div className="my-10">
         <h2 className="text-2xl font-semibold mb-5">Employee Details</h2>
-        <div className="grid grid-cols-5 ">
+        <div className="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-2 gap-5 ">
           <div>
             <h2 className="font-semibold text-xl mb-2">Project Name</h2>
             <div className="flex items-center gap-3">
@@ -74,7 +74,7 @@ export default function Notification() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-10 gap-5">
         <div>
           <h2 className="text-xl font-semibold">Project Type</h2>
           <hr className="my-5" />

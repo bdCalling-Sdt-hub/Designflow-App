@@ -10,7 +10,7 @@ const Page = () => {
                 <FaChevronLeft className="text-xl font-semibold" />
                 Personal Information
             </Link>
-            <div className='w-1/2 mx-auto'>
+            <div className='md:w-1/2 mx-5 md:mx-auto'>
                 <div className='flex items-center'>
                     <div className='flex items-center gap-5'>
                         <img className='w-36 rounded-full' src="/image/Dashboard/userImage.png" alt="" />

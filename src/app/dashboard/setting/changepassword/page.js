@@ -19,7 +19,7 @@ const Page = () => {
                 <FaChevronLeft className="text-xl font-semibold" />
                 Change Password
             </Link>
-            <div className='w-1/2 mx-auto'>
+            <div className='md:w-1/2 w-[90%] mx-auto'>
                 <form className='my-10' action="">
                     {/* Current Password */}
                     <label className='block mt-3' htmlFor="current-password">

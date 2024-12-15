@@ -21,7 +21,7 @@ const Page = () => {
     };
 
     return (
-        <div className='mr-10 py-10'>
+        <div className='md:mr-10 md:px-0 px-5 py-10'>
             <div>
                 <img className='w-full rounded-xl' src="/image/Dashboard/home/select-project-1.png" alt="" />
             </div>

@@ -36,7 +36,7 @@ const page = () => {
 
 
     return (
-        <div className='my-10 mr-10'>
+        <div className='my-10 md:mr-10 md:px-0 px-5'>
             <div className='flex items-center justify-between gap-5 flex-wrap'>
                 <Link href={'/dashboard/servicerequests'} className='flex items-center gap-3 text-3xl font-semibold' > <FaArrowLeft />Service Requests</Link>
                 <div className='flex items-center gap-5'>
@@ -49,7 +49,7 @@ const page = () => {
                                 // onChange={handleDateChange}
                                 dateFormat="MMMM d, yyyy"
                                 placeholderText="Select a date"
-                                className="py-2 px-4 min-w-48 border border-gray-300 rounded-md"
+                                className="py-2 px-4 md:min-w-48 border border-gray-300 rounded-md"
                             />
                         </div>
 

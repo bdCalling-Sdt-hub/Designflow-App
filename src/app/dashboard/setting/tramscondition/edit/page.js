@@ -42,7 +42,7 @@ const Page = () => {
   };
 
   return (
-    <div className="mt-8 md:mx-6">
+    <div className="mt-8 md:mr-10 md:px-0 px-5">
       <Link
         href="/dashboard/setting/privacypolicy"
         className="flex items-center flex-wrap gap-2"
@@ -72,7 +72,7 @@ const Page = () => {
           <Form.Item>
             <Button
               htmlType="submit"
-              className="h-[44px] w-[260px] !text-white !bg-primaryBg text-[#fff] rounded-[8px]"
+              className="h-[44px] w-[260px] !text-white !bg-primaryBg   rounded-[8px]"
             //   loading={isLoading} // Add loading state to button
             >
               Update Trams & Condition

@@ -105,10 +105,11 @@ export default function Page() {
 
 
   return (
-    <div className="md:px-10">
+    <div className="md:px-10 px-5">
       <div className="mt-10">
         <h2 className="text-3xl font-semibold mb-10">Overview</h2>
-        <div className="pr-10 grid grid-cols-4 gap-10">
+
+        <div className="md:pr-10 grid xl:grid-cols-4 md:grid-cols-2 md:gap-10 gap-5">
           <div className="flex items-center justify-between bg-[#171c17] p-8 rounded-lg">
             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white">
               <FaRegUser className="text-3xl" />
@@ -140,9 +141,9 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 items-center gap-10">
+      <div className="grid lg:grid-cols-2 items-center md:gap-10">
         {/* Client Overview 1 */}
-        <div className="w-full bg-gray-100 p-10 pb-20 rounded-xl my-10 h-[50vh]">
+        <div className="md:w-full w-auto bg-gray-100 md:p-10 p-5 pb-20 rounded-xl md:my-10 my-5 h-[50vh]">
           <h2 className="mb-10 font-semibold text-xl">Client Overview</h2>
           <div className="h-full w-full">
             {/* Ensure the Area chart takes up the full height available */}
@@ -151,7 +152,7 @@ export default function Page() {
         </div>
 
         {/* Client Overview 2 */}
-        <div className="w-full bg-gray-100 p-10 pb-20 rounded-xl my-10 h-[50vh]">
+        <div className="md:w-full w-auto bg-gray-100 md:p-10 p-5 pb-20 rounded-xl md:my-10 my-5 h-[50vh]">
           <h2 className="mb-10 font-semibold text-xl">Client Overview</h2>
           <div className="h-full w-full">
             {/* Ensure the Area chart takes up the full height available */}

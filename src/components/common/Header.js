@@ -22,19 +22,19 @@ export default function Header() {
         } md:flex`}
       >
         <li className="my-5">
-          <Link href={"/"} className={`${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link onClick={toggleMenu} href={"/"} className={`${pathname === '/' ? 'active' : ''}`}>Home</Link>
         </li>
         <li className="my-5">
-          <Link href={"/"}>About</Link>
+          <Link onClick={toggleMenu} href={"/"}>About</Link>
         </li>
         <li className="my-5">
-          <Link href={"/"}>Service</Link>
+          <Link onClick={toggleMenu} href={"/"}>Service</Link>
         </li>
         <li className="my-5">
-          <Link href={"/"}>Portfolio</Link>
+          <Link onClick={toggleMenu} href={"/"}>Portfolio</Link>
         </li>
         <li className="my-5">
-          <Link href={"/"}>Contact</Link>
+          <Link onClick={toggleMenu} href={"/"}>Contact</Link>
         </li>
       </ul>
       <div className="flex justify-between">
@@ -60,9 +60,9 @@ export default function Header() {
           </li>
         </ul> */}
         <div className="flex items-center gap-2">
-          <button className="py-3 px-10 font-semibold rounded-md text-white bg-[#ea733c]">
+          <Link  href={'/login'} className="py-3 px-10 font-semibold rounded-md block text-white bg-[#ea733c]">
             Login
-          </button>
+          </Link>
           <div className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
           </div>

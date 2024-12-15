@@ -3,7 +3,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            <div className="bg-white p-8 rounded-lg shadow-lg w-[40%] mt-10">
+            <div className="bg-white p-8 rounded-lg shadow-lg md:w-[40%] mt-10 mx-5 md:mx-0">
                 <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Add Designer</h2>
                 <form  >
                     {/* Full Name Field */}

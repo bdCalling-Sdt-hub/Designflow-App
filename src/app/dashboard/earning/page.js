@@ -55,12 +55,12 @@ const Page = () => {
     return (
         <div>
             <DashboardHomeHeader></DashboardHomeHeader>
-            <div className='mr-10'>
-                <div className='flex items-center justify-between gap-5 flex-wrap'>
+            <div className='md:mr-10 md:px-0 px-5 py-2'>
+                <div className='flex items-center flex-wrap justify-between gap-5 '>
                     <Link href={'/dashboard/home'} className='flex items-center gap-3 text-3xl font-semibold' > <FaArrowLeft />Earning List</Link>
 
                     <div>
-                        <div className='flex items-center gap-5'>
+                        <div className='flex items-center flex-wrap gap-5'>
                             <button className='py-3 px-8 bg-primaryBg text-white flex items-center gap-3 justify-center rounded-md'><FaExchangeAlt /> Today’s Earn ing <span className='text-xl font-semibold'>$3230</span></button>
                             <button className='py-3 px-8 bg-primaryBg text-white flex items-center gap-3 justify-center rounded-md'><FaExchangeAlt />  All Earning <span className='text-xl font-semibold'>$3230</span></button>
                         </div>
@@ -68,7 +68,7 @@ const Page = () => {
 
                     <div className='flex items-center gap-5'>
                         {/* Date Picker and Search */}
-                        <div className="flex gap-5 items-center my-5">
+                        <div className="flex gap-5 items-center md:my-5">
                             {/* Date Picker */}
                             <div className="relative">
                                 <DatePicker
@@ -97,7 +97,7 @@ const Page = () => {
                 </div>
             </div>
             <div>
-                <div className="overflow-x-auto mr-10 mt-10 bg-[#dee6dc]">
+                <div className="overflow-x-auto md:mr-10 md:mx-0 mx-5 md:mt-10 mt-5 bg-[#dee6dc]">
                     <table className="min-w-full table-auto border-collapse  border-2 border-[#dee6dc]">
                         <thead className="bg-[#344331]">
                             <tr>

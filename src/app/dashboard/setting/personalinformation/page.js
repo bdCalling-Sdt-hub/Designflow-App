@@ -7,8 +7,8 @@ const Page = () => {
     return (
         <div>
             <Link className='text-2xl font-semibold my-10 flex items-center gap-2' href={'/dashboard/setting'}><FaChevronLeft className="text-xl font-semibold" />Personal Information</Link>
-            <div className='w-1/2 mx-auto'>
-                <div className='flex items-center justify-between'>
+            <div className='md:w-1/2 w-[90%]  mx-5 md:mx-auto'>
+                <div className='flex items-center justify-between flex-wrap gap-5'>
                     <div className='flex items-center gap-5'>
                         <img className='w-36 rounded-full' src="/image/Dashboard/userImage.png" alt="" />
                         <h2 className='text-2xl font-semibold'>Jae</h2>

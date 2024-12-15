@@ -15,7 +15,7 @@ export default function page() {
         <div>
             <Link href={'/dashboard/home'} className='text-2xl font-semibold flex items-center justify-start gap-3 my-10'><FaArrowLeft /> Notification</Link>
         </div>
-        <div className="md:mr-5 mx-5 md:mx-0">
+        <div className="md:mr-5">
             <Link href={'/dashboard/notification/:id'} className="flex items-center gap-5 border-2 border-gray-600 rounded p-5 mb-2">
                 <div className="p-3 border-2 rounded-full ">
                     <div className="relative">

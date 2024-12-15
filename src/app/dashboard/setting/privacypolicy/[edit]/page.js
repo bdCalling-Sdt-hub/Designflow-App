@@ -42,7 +42,7 @@ const Page = () => {
   };
 
   return (
-    <div className="mt-8 md:mx-6">
+    <div className="mt-8 md:mr-6 md:px-0 px-5">
       <Link
         href="/dashboard/setting/privacypolicy"
         className="flex items-center flex-wrap gap-2"

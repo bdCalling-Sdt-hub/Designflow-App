@@ -7,7 +7,7 @@ import { FaPaperPlane } from 'react-icons/fa';
 import { FiPaperclip } from 'react-icons/fi';
 import { useParams } from 'next/navigation';
 
-export default function page() {
+export default function Page() {
   const [message, setMessage] = useState('');
   const [fileName, setFileName] = useState('');
   const onChange = (key) => {

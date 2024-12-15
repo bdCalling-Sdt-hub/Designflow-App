@@ -13,10 +13,10 @@ const Page = () => {
     ];
 
     return (
-        <div className='my-10 mr-10'>
+        <div className='my-10 md:mr-10 md:px-0 px-5'>
             <div className='flex justify-end items-center flex-wrap my-10'>
                  
-                <div className='flex items-center gap-5'>
+                <div className='flex items-center flex-wrap md:gap-5'>
                     <Link href={'makeadmin/addadmin'} className='py-2 px-8 bg-primaryBg text-white flex items-center gap-2 rounded-md'><span className='text-xl'>+</span>  Add Admin</Link>
                     {/* Date Picker and Search */}
                     <div className="flex gap-5 items-center my-5">

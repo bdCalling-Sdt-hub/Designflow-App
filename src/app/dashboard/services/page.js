@@ -4,7 +4,7 @@ import { FaArrowLeft, FaChevronLeft, FaSearch } from 'react-icons/fa';
 
 const Page = () => {
     return (
-        <div className='mr-10'>
+        <div className='md:mr-10 md:px-0 px-5'>
             <div className='my-10'>
                 <div className='flex justify-between items-center flex-wrap my-10'>
                     <Link href={'/'} className='flex items-center gap-5 text-2xl font-semibold'><FaChevronLeft />Service List</Link>
@@ -29,7 +29,7 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-6 gap-5'>
+                <div className='grid xl:grid-cols-6 lg:grid-cols-3 sm:grid-cols-2  gap-5'>
                     {[...Array(5)].map((_, idx) => (
                         <div key={idx} className="p-5 border border-primaryBg rounded-lg">
                             <img className="w-full" src="/image/Dashboard/home/servicesImage.png" alt="Service" />
@@ -72,7 +72,7 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-6 gap-5'>
+                <div className='grid xl:grid-cols-6 lg:grid-cols-3 sm:grid-cols-2  gap-5'>
                     {[...Array(5)].map((_, idx) => (
                         <div key={idx} className="p-5 border border-primaryBg rounded-lg">
                             <img className="w-full" src="/image/Dashboard/home/servicesImage.png" alt="Service" />
@@ -115,7 +115,7 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-6 gap-5'>
+                <div className='grid xl:grid-cols-6 lg:grid-cols-3 sm:grid-cols-2  gap-5'>
                     {[...Array(5)].map((_, idx) => (
                         <div key={idx} className="p-5 border border-primaryBg rounded-lg">
                             <img className="w-full" src="/image/Dashboard/home/servicesImage.png" alt="Service" />
@@ -158,7 +158,7 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-6 gap-5'>
+                <div className='grid xl:grid-cols-6 lg:grid-cols-3 sm:grid-cols-2  gap-5'>
                     {[...Array(5)].map((_, idx) => (
                         <div key={idx} className="p-5 border border-primaryBg rounded-lg">
                             <img className="w-full" src="/image/Dashboard/home/servicesImage.png" alt="Service" />

@@ -8,8 +8,8 @@ import { PiMapPinLineLight } from 'react-icons/pi';
 const Page = () => {
     return (
         <div>
-            <div className='p-10'>
-                <div className='flex justify-between items-center'>
+            <div className='md:p-10 p-5'>
+                <div className='flex justify-between flex-wrap gap-5 items-center'>
                     <div className='flex items-center gap-5'>
                         <img src='/image/Dashboard/userImage.png' />
                         <div>
@@ -22,7 +22,7 @@ const Page = () => {
                     </div>
                 </div>
                 <h2 className='my-10 text-xl font-semibold'>Employee Details</h2>
-                <div className='grid grid-cols-6 gap-10'>
+                <div className='grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10'>
                     <div>
                         <h2 className='font-semibold mb-2'>Client Name</h2>
                         <div className='flex items-center gap-2'>
@@ -82,7 +82,7 @@ const Page = () => {
 
                 </div>
 
-                <div className='my-10 grid grid-cols-3 gap-10'>
+                <div className='my-10 grid xl:grid-cols-3 md:grid-cols-2 gap-10'>
                     <div>
                         <h2 className='py-2 border-b-[1px] border-primaryBg mb-2 text-xl font-semibold'>Project Type</h2>
                         <div className='bg-primaryBg p-5 rounded-xl'>
