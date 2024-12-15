@@ -36,8 +36,8 @@ export default function DashboardHomeHeader() {
       </div>
       {
         toggleDrop &&
-        <div className="z-[9999999] absolute top-24 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
-          <p>Profile</p>
+        <div className="z-[9999999] hover:bg-[#637f5c] hover:text-white hover:cursor-pointer absolute top-28 bg-[#1f2521] right-5 py-5 px-10 rounded-md">
+          <Link href={'/dashboard/setting/personalinformation'} >Profile</Link>
         </div>
       }
 

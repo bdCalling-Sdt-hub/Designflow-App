@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { CiLocationOn } from 'react-icons/ci';
+import { CiCalendarDate, CiLocationOn } from 'react-icons/ci';
 import { MdOutlineEmail, MdOutlinePhoneIphone } from 'react-icons/md';
 import { PiMapPinLineLight } from "react-icons/pi";
 import { IoCalendarClearOutline } from 'react-icons/io5';
@@ -8,6 +9,9 @@ import Link from 'next/link';
 
 
 const page = () => {
+
+
+
     return (
         <div className='p-10'>
             <div className='flex justify-between items-center'>

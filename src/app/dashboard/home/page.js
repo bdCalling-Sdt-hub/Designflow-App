@@ -1,7 +1,7 @@
 'use client'
 
 import DashboardHomeHeader from "@/components/dashboard/dashboardHome/DashboardHomeHeader";
-import React from "react";
+import React, { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { CiDollar } from "react-icons/ci";
 import { TiDocumentText } from "react-icons/ti";
@@ -12,6 +12,7 @@ import Link from "next/link";
 import Swal from "sweetalert2";
 import { Column } from '@ant-design/plots';
 import { Area } from '@ant-design/plots';
+import { Modal } from "antd";
 
 const tableData = [
   { id: 1, name: "John Doe", email: "john@example.com", phone: "123-456-7890", requestDate: "2024-12-10" },
@@ -83,7 +84,25 @@ export default function Page() {
       };
     },
   };
-  
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+
+
+
+
 
   return (
     <div className="md:px-10">
@@ -168,7 +187,7 @@ export default function Page() {
                   <td className="px-4 py-4">{client.phone}</td>
                   <td className="px-4 py-4">{client.requestDate}</td>
                   <td className="px-4 py-4 flex flex-wrap gap-5 justify-end">
-                    <button className="bg-blue-800 text-white flex items-center py-2 px-8 rounded gap-2">
+                    <button onClick={showModal} className="bg-blue-800 text-white flex items-center py-2 px-8 rounded gap-2">
                       <FiCornerUpLeft /> Send Offer
                     </button>
                     <Link href={'/dashboard/home/sdf'} className="bg-orange-600 text-white flex items-center py-2 px-8 rounded gap-2">
@@ -183,6 +202,77 @@ export default function Page() {
             </tbody>
           </table>
         </div>
+
+
+        <Modal open={isModalOpen} footer={null} onCancel={handleCancel}>
+          {/* Modal Header */}
+          <div className="flex justify-between items-center pb-4 border-b">
+            <h2 className="font-semibold text-2xl">Project Offer</h2>
+            {/* Remove Cancel button here */}
+          </div>
+
+          {/* Modal Body/Form */}
+          <form
+            className="p-6 w-full max-w-lg mx-auto"
+            onSubmit={(e) => {
+              e.preventDefault(); // Prevent default form submission
+              handleFormSubmit(); // Custom function to handle form submission
+            }}
+          >
+            {/* Project Name */}
+            <label className="block mb-4">
+              <span className="block mb-2 text-gray-700 font-medium">Project Name</span>
+              <input
+                type="text"
+                name="projectName"
+                // value={formData.projectName}
+                // onChange={handleChange}
+                placeholder="Enter project name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
+                required
+              />
+            </label>
+
+            {/* Timeline */}
+            <label className="block mb-4">
+              <span className="block mb-2 text-gray-700 font-medium">Timeline</span>
+              <input
+                type="text"
+                name="timeline"
+                // value={formData.timeline}
+                // onChange={handleChange}
+                placeholder="e.g., 3 weeks"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
+                required
+              />
+            </label>
+
+            {/* Budget */}
+            <label className="block mb-6">
+              <span className="block mb-2 text-gray-700 font-medium">Budget</span>
+              <input
+                type="number"
+                name="budget"
+                // value={formData.budget}
+                // onChange={handleChange}
+                placeholder="Enter budget amount"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
+                required
+              />
+            </label>
+
+            {/* Submit Button */}
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="w-48 mx-auto flex justify-center font-semibold text-xl items-center bg-primaryBg text-white py-3 px-4 rounded-md focus:ring focus:ring-blue-300 focus:outline-none"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </Modal>
+
       </div>
     </div>
   );

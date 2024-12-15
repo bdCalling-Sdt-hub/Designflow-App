@@ -126,7 +126,7 @@ const Page = () => {
 
 
                         <div className='flex items-center justify-end'>
-                            <Link className='mt-20  px-20 rounded-md py-3 bg-[#637f5c] text-white ' href={'/'}>Next</Link>
+                            <Link className='mt-20  px-20 rounded-md py-3 bg-[#637f5c] text-white ' href={'/dashboard/projects/details/upadlfj'}>Next</Link>
                         </div>
                     </div>
 

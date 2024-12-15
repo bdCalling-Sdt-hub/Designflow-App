@@ -16,7 +16,7 @@ const page = () => {
             </div>
             <div className='mt-10 grid grid-cols-3 gap-10 items-start'>
                 <div className='border-2  rounded-md col-span-2 overflow-hidden p-5'>
-                    <Calendar></Calendar>
+                    <Calendar ></Calendar>
                 </div>
                 <div className='col-span-1 px-5 py-10 bg-gray-200 rounded-md'>
                     <h2 className='font-semibold'>Today’s Requests</h2>

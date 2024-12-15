@@ -8,7 +8,11 @@ export default function layout({ children }) {
     <div>
       <div className="flex ">
         <DashboardSidebar></DashboardSidebar>
-        <div className="w-full md:pl-10">{children}</div>
+        <div className="w-full md:pl-10">
+          
+          {children}
+          
+        </div>
       </div>
     </div>
   );

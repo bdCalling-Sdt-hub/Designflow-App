@@ -10,7 +10,7 @@ import { IoLocationSharp } from 'react-icons/io5'
 export default function page() {
   return (
     <div className=" mx-5 md:mx-0 ">
-      <DashboardHomeHeader></DashboardHomeHeader>
+      {/* <DashboardHomeHeader></DashboardHomeHeader> */}
       {/* <DashboardHome></DashboardHome> */}
 
       <div className='mr-10 my-10'>
