@@ -1,8 +1,20 @@
+'use client'
+import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 
 export default function page() {
+
+  const router = useRouter(); // Initialize useRouter
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    router.push('/dashboard/home'); // Programmatically navigate to the target page
+  };
+
+
   return (
     <div className="grid lg:grid-cols-2 gap-10">
       <div className="lg:p-20 sm:p-10 p-5">
@@ -64,7 +76,7 @@ export default function page() {
             </div>
           </div>
 
-          <button className="bg-primaryBg text-white w-full p-2 my-3 rounded-md">
+          <button onClick={handleOnClick} className="bg-primaryBg text-white w-full p-2 my-3 rounded-md">
             Login
           </button>
 

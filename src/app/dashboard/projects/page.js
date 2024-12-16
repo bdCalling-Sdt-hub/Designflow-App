@@ -9,7 +9,7 @@ import { IoLocationSharp } from 'react-icons/io5'
 
 export default function page() {
   return (
-    <div className=" md:mx-5 md:mx-0 ">
+    <div className=" md:mx-0 ">
       {/* <DashboardHomeHeader></DashboardHomeHeader> */}
       {/* <DashboardHome></DashboardHome> */}
 
@@ -30,7 +30,7 @@ export default function page() {
                     // onChange={handleDateChange}
                     dateFormat="MMMM d, yyyy"
                     placeholderText="Select a date"
-                    className="py-2 px-4 min-w-48 border border-gray-300 rounded-md"
+                    className="py-2 px-4 md:min-w-48 border border-gray-300 rounded-md"
                   />
                 </div>
 

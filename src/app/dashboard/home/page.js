@@ -105,7 +105,7 @@ export default function Page() {
 
 
   return (
-    <div className="md:px-10 px-5">
+    <div className="px-5 md:px-0">
       <div className="mt-10">
         <h2 className="text-3xl font-semibold mb-10">Overview</h2>
 
@@ -141,7 +141,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 items-center md:gap-10">
+      <div className="grid lg:grid-cols-2 items-center md:gap-10 md:pr-10">
         {/* Client Overview 1 */}
         <div className="md:w-full w-auto bg-gray-100 md:p-10 p-5 pb-20 rounded-xl md:my-10 my-5 h-[50vh]">
           <h2 className="mb-10 font-semibold text-xl">Client Overview</h2>

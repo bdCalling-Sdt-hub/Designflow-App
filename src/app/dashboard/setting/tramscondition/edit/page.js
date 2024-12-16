@@ -29,7 +29,7 @@ const Page = () => {
       // Update terms and conditions with the content
       const res = await updateTC({ content }).unwrap();
 
-      navigate("/dashboard/setting/tramscondition"); // Redirect after success
+      navigate("/dashboard/setting/privacypolicy"); // Redirect after success
 
       if (res?.code === 200) {
         toast.success(res?.message); // Show success notification
@@ -42,9 +42,9 @@ const Page = () => {
   };
 
   return (
-    <div className="mt-8 md:mr-10 md:px-0 px-5">
+    <div className="mt-8 md:mr-6 md:px-0 px-5">
       <Link
-        href="/dashboard/setting/privacypolicy"
+        href="/dashboard/setting/tramscondition"
         className="flex items-center flex-wrap gap-2"
       >
         <FaCircleArrowLeft className="text-primaryBg w-8 h-8" />
@@ -72,10 +72,10 @@ const Page = () => {
           <Form.Item>
             <Button
               htmlType="submit"
-              className="h-[44px] w-[260px] !text-white !bg-primaryBg   rounded-[8px]"
+              className="h-[44px] w-[260px] !text-white !bg-primaryBg  rounded-[8px]"
             //   loading={isLoading} // Add loading state to button
             >
-              Update Trams & Condition
+              Update Privacy & Policy
             </Button>
           </Form.Item>
         </div>

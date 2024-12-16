@@ -22,10 +22,9 @@ export default function DashboardHomeHeader() {
         <p>Have a nice day</p>
       </div>
       <div className="flex items-center cursor-pointer gap-2">
-        <Link href="/dashboard/notification">
-
+        <Link href="/dashboard/notification" className="relative">
           <IoNotifications className="text-3xl" />
-
+          <span className="w-[8px] h-[8px] rounded-full absolute top-1 right-1 bg-red-600 block"></span>
         </Link>
         <div onClick={handleShowDropdown} className="flex items-center gap-2">
           <img className="w-10 rounded-full" src="/image/Dashboard/userImage.png" alt="user Image" />

@@ -13,7 +13,7 @@ const Page = () => {
                         <div className="flex gap-5 items-center my-5">
                             {/* Search Input */}
                             <div>
-                                <button className='p-3 border-[#637f5c] border min-w-48 text-[#637f5c] rounded-lg font-semibold'>+  Edit Service</button>
+                                <button className='p-3 border-[#637f5c] border md:min-w-48 text-[#637f5c] rounded-lg font-semibold'>+  Edit Service</button>
                             </div>
                             <div className="relative w-full max-w-sm">
                                 <input
